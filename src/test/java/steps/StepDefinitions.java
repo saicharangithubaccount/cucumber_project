@@ -40,6 +40,14 @@ public class StepDefinitions {
         data = TestDataReader.getData(scenario.getName());
     }
 
+    @Given("the user navigates to")
+    public void the_user_navigates_to() {
+        url = QaProps.getValue("url");
+        driver.get(url);
+        System.out.println(1 / 0);
+        data = TestDataReader.getData(scenario.getName());
+    }
+
     @When("the user enter the product name")
     public void the_user_enter_the_product_name() {
         homePage = new HomePage(driver);
